@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app id="WebApp_ID" version="2.4"
+	xmlns="http://java.sun.com/xml/ns/j2ee" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://java.sun.com/xml/ns/j2ee 
+	http://java.sun.com/xml/ns/j2ee/web-app_2_4.xsd">
+  <display-name>Archetype Created Web Application</display-name>
+  <welcome-file-list>
+		<welcome-file>index.html</welcome-file>
+		<welcome-file>index.jsp</welcome-file>
+	</welcome-file-list>
+
+
+	<servlet>
+		<servlet-name>Login</servlet-name>
+		<jsp-file>/WEB-INF/pages/login.jsp</jsp-file>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>Login</servlet-name>
+		<url-pattern>/login</url-pattern>
+	</servlet-mapping>
+
+
+	<servlet>
+		<servlet-name>ProductWebServlet</servlet-name>
+		<servlet-class>trng.imcs.servlets.ProductWebServlet</servlet-class>
+	</servlet>
+	<servlet>
+		<servlet-name>WelcomeServlet</servlet-name>
+		<servlet-class>trng.imcs.servlets.WelcomeServlet</servlet-class>
+	</servlet>
+	<servlet>
+		<servlet-name>LoginServlet</servlet-name>
+		<servlet-class>trng.imcs.servlets.LoginServlet</servlet-class>
+	</servlet>
+	
+	<servlet-mapping>
+		<servlet-name>ProductWebServlet</servlet-name>
+		<url-pattern>/product.do</url-pattern>
+	</servlet-mapping>
+	<servlet-mapping>
+		<servlet-name>WelcomeServlet</servlet-name>
+		<url-pattern>/WelcomeServlet</url-pattern>
+	</servlet-mapping>
+	<servlet-mapping>
+		<servlet-name>LoginServlet</servlet-name>
+		<url-pattern>/login.do</url-pattern>
+	</servlet-mapping>
+	<servlet>
+		<servlet-name>EmployeeServlet</servlet-name>
+		<servlet-class>trng.imcs.servlets.EmployeeServlet</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>EmployeeServlet</servlet-name>
+		<url-pattern>/employeeOperations.do</url-pattern>
+	</servlet-mapping>
+	<servlet-mapping>
+		<servlet-name>EmployeeServlet</servlet-name>
+		<url-pattern>/addEmployee.do</url-pattern>
+	</servlet-mapping>
+	
+	
+	<jsp-config>
+		<taglib>
+			<taglib-uri>coretag</taglib-uri>
+			<taglib-location>tlds/c.tld</taglib-location>
+		</taglib>
+
+		<taglib>
+			<taglib-uri>formattag</taglib-uri>
+			<taglib-location>tlds/fmt.tld</taglib-location>
+		</taglib>
+	</jsp-config>
+</web-app>
